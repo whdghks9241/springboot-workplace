@@ -1,0 +1,5 @@
+package com.kh.ThymeleafSpring;
+
+public class HelloController {
+
+}

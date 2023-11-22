@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>productList</title>
+</head>
+<body>
+	<h1 th:text="${products}"></h1>
+	<table>
+		<thead>
+			<tr>
+				<th>제품 아이디</th>
+				<th>제품명 </th>
+				<th>카테고리 </th>
+				<th>가격 </th>
+				<th>수량 </th>
+			</tr>
+			
+		</thead>
+		
+	</table>
+		
+</body>
+</html>

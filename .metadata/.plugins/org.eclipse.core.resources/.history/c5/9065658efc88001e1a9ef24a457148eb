@@ -1,0 +1,9 @@
+package com.kh.springdb.model;
+
+public class Board {
+
+	int board_id;
+	String title;
+	String content;
+	String author;
+}
