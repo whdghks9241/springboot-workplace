@@ -1,0 +1,44 @@
+AUTO_INCREMENT
+	테이블에서 PRIMARY KEY 에서 주로 사용되는 속성
+	새로운 값이 추가될 때마다 해당 열의 값을 자동으로 증가
+
+INNODB_AUTOMIC_LOCK
+	AUTO_INCREMENT 키를 관리하는데 사용되는 잠금 모드를 설정
+	INNODB에서는 트랜잭션 별로 AUTO_INCREMENT 값을 관리하기 때문에 
+	여러 트랜잭션이 동시에 삽입 작업을 수행할 때 AUTO_INCREMENT 값이 순서가 꼬일 수 있음
+
+0 : 동시에 여러 트랜잭션이 내용 삽입을 시도할 때 한 번에 하나의 트랜잭션 값을 증가시킬 수 있음
+
+1 : AUTO_INCREMENT 잠금은 따로 획득하지 않고 순차적으로 값을 증가시킴
+   동시에 여러 트랜잭션이 값을 증가시킬수 있지만 AUTO_INCREMENT 값이 순차적이지 않을 수 있음
+
+INT : 정수형
+	4바이트의 저장공간을 사용
+	TINYINT : 1바이트 정수형 데이터
+	SMALLINT : 2바이트 정수형 데이터
+	BIGINT : 8바이트 정수형 데이터
+
+VARCHAR : 가변 길이 문자열
+
+CHAR : 고정 길이 문자열
+
+DATE : 날짜
+
+TIME : 시간
+
+DATETIME : 날짜 와 시간
+
+TIMESTAMP : 날짜 와 시간 을 나타내고, 날짜가 업데이트 될 경우에 자동으로 업데이트 됨
+
+
+
+
+
+oracle - 계정 - 테이블
+
+mysql - 계정 - 데이터베이스 만들어준 후 선택 - 테이블 생성
+
+create database 데이터베이스이름 default character set utf8;
+
+데이터베이스를 따로 생성
+grant all privileges on 데이터베이스 *to 계정아이디@localhost identified by '비밀번호';

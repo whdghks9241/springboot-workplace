@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>유저 정보 조회</title>
+</head>
+<body>
+	<h1>all user info</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>name</th>
+				<th>email</th>
+				<th>birth</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="u : ${users}">
+				<td><a th:href="@{'/user-info/' + ${u.mno}}" th:text="${u.mno}"></a></td>
+				<td th:text="${u.mname}"></td>
+				<td th:text="${u.memail}"></td>
+				<td th:text="${u.mbirth}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
