@@ -16,4 +16,13 @@ public interface UserMapper {
 	User getUserById(int id);
 	
 	void insertUser(User user);
+	//회원가입
+	 void saveUser(User user);
+	 
+	 User loginUser(String memail);
+	 
+	//유저 정보 수정 메서드
+	void updateUser(User user);
+	
+	void deleteUser(int mno);
 }

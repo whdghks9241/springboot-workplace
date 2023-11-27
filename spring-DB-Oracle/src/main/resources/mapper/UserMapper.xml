@@ -21,4 +21,21 @@
 		INSERT INTO MEMBERINFO (MNO, MNAME, MEMAIL, MBIRTH)
 		VALUES (#{mno}, #{mname}, #{memail}, #{mbirth})
 	</insert>
+	
+	<select id="loginUser" resultType="com.kh.springdb.model.User">
+        SELECT * FROM MEMBERINFO WHERE MEMAIL = #{memail}
+    </select>
+    <!-- 사용자 정보 업데이트 -->
+	<update id="updateUser" parameterType="com.kh.springdb.model.User">
+		UPDATE MEMBERINFO
+		SET
+		MNAME = #{mname},
+		MEMAIL = #{memail}
+		WHERE MNO = #{mno}
+	</update>
+	
+	<!-- 사용자 삭제하는 CRUD 중 delete 문 -->
+	<delete id="deleteUser" parameterType="int">
+		DELETE FROM MEMBERINFO WHERE MNO = #{mno}
+	</delete>
 </mapper>
