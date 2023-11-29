@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Board List</title>
+</head>
+	<body>
+		<h2>Board List</h2>
+		<script th:inline="javascript">
+			function checkDelete() {
+				var checkdelete = confirm("게시물을 모두 삭제하시겠습니까?");
+				if (checkdelete) {
+					window.location.href='/Boards/delete/all';
+					//return true;
+				} else {
+					alert("게시물 삭제를 취소했습니다.");
+					//return false;
+				}
+			}
+			
+		</script>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>제목</th>
+					<th>내용</th>
+					<th>기타</th>
+					<th>DETAIL(상세보기)</th>	
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="board : ${boards}">
+					<td th:text="${board.board_id}"></td>
+					<td th:text="${board.title}"></td>
+					<td th:text="${board.content}"></td>
+					<td th:text="${board.author}"></td>
+					<td><a th:href="@{/Boards/detail/{id}(id=${board.board_id})}">상세보기 클릭</a></td>
+	
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{/Boards/new}">게시물 추가</a>
+		<a href="#" onclick="checkDelete()">전체삭제</a>
+		<!-- <a th:href="@{/Boards/delete/all}">전체삭제</a> -->
+	</body>
+
+</html>
+

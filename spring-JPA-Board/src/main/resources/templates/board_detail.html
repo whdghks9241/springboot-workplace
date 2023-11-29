@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board Detail</title>
+</head>
+<body>
+    <h2>Board Detail</h2>
+    <table border="1">
+
+        <tr>
+				<th>ID</th>
+				<th>제목</th>
+				<th>내용</th>
+				<th>기타</th>
+        </tr>
+    		 <tr th:each="board : ${boards}">
+ 				<td th:text="${board.board_id}"></td>
+				<td th:text="${board.title}"></td>
+				<td th:text="${board.content}"></td>
+				<td th:text="${board.author}"></td>
+				<td><a th:href="@{/Boards/update/{id}(id=${board.board_id})}">수정</a></td>
+				<td><a th:href="@{/Boards/delete/{id}(id=${board.board_id})}">삭제</a></td>
+			</tr>
+				
+    </table>
+</body>
+</html>

@@ -30,14 +30,17 @@ public class ProductService {
 	}
 
 	// 저장
+	// 최초로 작성한 내용저장
+	// 기존에 작성한 내용 수정해서 저장
 	public Product saveProduct(Product product) {
 		return productRepository.save(product);
 	}
 	
+	// 삭제
 	public void deleteProductById(Long id) {
 		productRepository.deleteById(id);
 	}
-	
+
 }
 
 /*
