@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>cafe Detail</title>
+</head>
+<body>
+    <h2>cafe Detail</h2>
+    <table border="1">
+
+        <tr>
+					<th>cafe_id</th>
+					<th>name</th>
+					<th>location</th>
+					<th>author</th>
+					<th>apening_hours</th>
+        </tr>
+    		 <tr th:each="cafe : ${cafes}">
+ 				<td th:text="${cafe.cafe_id}"></td>
+				<td th:text="${cafe.name}"></td>
+				<td th:text="${cafe.location}"></td>
+				<td th:text="${cafe.author}"></td>
+				<td th:text="${cafe.apening_hours}"></td>
+				<a th:href="@{/cafes}">Back to list</a>
+			</tr>
+    </table>
+<!--
+    <div th:unless="${cafe != null}">
+		<p>카페가 없숴</p>
+		<a th:href="@{/cafes}">돌아가기</a>
+	</div>
+	-->
+</body>
+</html>
+<!--
+	th:if 의 반대로 th:unless를 사용
+		th:if 가 참이면 unless로 작성해준 테그는 보여지지 않으나
+		th:unless가 참이면 unless로 작성해준 테그가 보여진다
+-->
