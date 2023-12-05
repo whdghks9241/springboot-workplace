@@ -80,18 +80,6 @@ public class Product {
 							 
 							 }
 							 
-		@RequireArgsConstructor : 해당 어노테이션이 적용된 클래스는 필수로 초기화 해야하는 final 필두나 @NotNull로 표시된 필드를 사용하는 생성자를 자동으로 생성
-							 예제 : 
-							 	@RequireArgsConstructor
-							 	public class Student {
-							 	
-							 	}
-							 
-							 
-							 
-							 
-							 
-							 
 	JPA 어노테이션
 		@Prepersist : 엔터티가 데이터베이스에 저장되기 전에 호출되는 메서드를 지정
 					  엔터티에 필요한 사전 처리 작업을 수행하는데 많이 사용
