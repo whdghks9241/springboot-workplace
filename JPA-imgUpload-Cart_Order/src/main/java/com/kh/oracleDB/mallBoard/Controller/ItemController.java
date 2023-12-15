@@ -27,8 +27,8 @@ public class ItemController {
 	
 	@GetMapping("/")
 	public String mainPage(Model model) {
-		List<Item> items = itemService.allItemList();
-		model.addAttribute("items", items);
+//		List<Item> items = itemService.allItemList();
+//		model.addAttribute("items", items);
 		return "/index";
 	}
 	
@@ -61,7 +61,7 @@ public class ItemController {
 	// 상세
 	@GetMapping("/view/{id}")
 	public String viewItem(Model model, @PathVariable("id") Integer id) {
-		model.addAttribute("item", itemService.getItemById(id));
+//		model.addAttribute("item", itemService.getItemById(id));
 		return "viewItem";
 	}
 	
@@ -70,7 +70,7 @@ public class ItemController {
 	// 삭제
 	@GetMapping("/delete/{id}")
 	public String deleteItem(@PathVariable("id") Integer id) {
-		itemService.itemDelete(id);
+//		itemService.itemDelete(id);
 		return "itemList";
 	}
 }

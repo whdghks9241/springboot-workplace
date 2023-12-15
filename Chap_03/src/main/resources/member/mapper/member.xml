@@ -6,4 +6,5 @@
 		INSERT INTO MEMBER( USER_NO, USER_ID, USER_RW, USER_NAME, USER_ADDRESS, REG_DATE )
 		VALUE ( MEMBER_SEQ.NEXTVAL, #{userId}, #{userPw}, #{userName}, #{userAddr}, SYSDATE ) 
 	</insert>
+	
 </mapper>

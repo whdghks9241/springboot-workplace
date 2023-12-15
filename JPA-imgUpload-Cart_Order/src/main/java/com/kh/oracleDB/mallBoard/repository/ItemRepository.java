@@ -6,12 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.kh.oracleDB.mallBoard.model.vo.Item;
 
-public interface ItemRepository extends JpaRepository<Item, Integer>{
-
-	Item findItemById(int id);
-	
-	// 페이지네이션 처리
-	Page<Item> findByNameContaining(String keyword, Pageable pageble);
+public interface ItemRepository extends JpaRepository<Item, Integer> {
+	  Item findItemById(int id);
+	//페이지네이션 처리
+	Page<Item> findByNameContaining(String keyword, Pageable pageable);
 }
 /*
 	Page : 페이지당 데이터를 나타내는 클래스

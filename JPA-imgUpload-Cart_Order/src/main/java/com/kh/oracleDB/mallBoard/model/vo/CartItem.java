@@ -41,6 +41,13 @@ public class CartItem {
 
 }
 /*
+Cart : 사용자가 담거나 주문한 상품들을 담아두는 역할
+현재 -> User 연결을 해주지 않아서 큰 의미는 없지만 추후 User와 연결하게 되면 User - Cart와 연관 관계가 생길 예정
+
+CartItem : 카트에 담긴 각 상품의 정보를 포함. 개별 상품들을 나타냄
+카트 아이템이 실질적으로 장바구니 역할을 함
+
+
 @ManyToOne(fetch=FetchType.EAGER)
 여러 엔티티가 하나의 엔티티에 감싸져서 활용되는 N:1 관계를 나타냄
 fetch=FetchType.EAGER : 가져오기, 감싸진(매핑된) 엔티티를

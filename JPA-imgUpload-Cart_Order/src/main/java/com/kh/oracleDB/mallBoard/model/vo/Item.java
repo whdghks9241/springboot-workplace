@@ -31,6 +31,8 @@ public class Item {
 
     private int stock; // 재고
 
+    private boolean isCheckout; // true(=판매중) false(=품절)
+    
     private int isSoldout; // 상품 상태 (0 : 판매중 / 1 : 품절)
 
     @ManyToOne(fetch = FetchType.EAGER)

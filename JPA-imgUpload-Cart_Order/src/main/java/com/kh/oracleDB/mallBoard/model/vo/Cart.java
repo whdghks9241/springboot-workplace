@@ -10,13 +10,28 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@Builder
+@Builder//객체를 불변하게 잡아주는 역할을 함
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Entity
 public class Cart {
+/*
+ @NoArgsConstructor
+ public class Cart() {
+ }
+ 
+ @AllArgsConstructor
+ public class Cart(int id,User user,int count,  List<CartItem> cartItems,LocalDate createDate){
+ this.id = id;
+ this.user = user;
+ this.count = count;
+ this.cartItems = cartItems;
+ this.createDate = createDate;
+ }
+
+ * */
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="cart_seq")
